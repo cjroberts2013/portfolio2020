@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-/* Utility */
+/* -------------------- Utility -------------------- */
 
 body {
     font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
     line-height: 1.6;
     font-size: 62.5%;
-    background-color: #292a2d;
+    /* background-color: #292a2d; */
+    background-color: #212121;
     color: #bcbcbc;
 }
 
@@ -23,14 +24,41 @@ img {
     width: 100%;
 }
 
+.btn {
+    text-decoration: none;
+    border: 2px solid #212121;
+    color: #212121;
+    margin:10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
-/* Navbar */
+.btn:hover {
+    color: #bcbcbc;
+    background-color: #212121;
+}
+
+.btn:active {
+    background-color: #4b4b4b;
+}
+
+.color__primary {
+    background-color: #b9f6ca;
+}
+
+.color__secondary {
+    background-color: #80d8ff;
+}
+
+
+/* -------------------- Navbar -------------------- */
 
 .navbar {
     font-size: 1.2rem;
     width: 100%;
     height: 70px;
-    background-color: #292a2d;
+    background-color: #212121;
     position: fixed;
     top: 0px;
 }
@@ -91,21 +119,28 @@ img {
     100% { opacity: 0; }
   }
 
-  /* Hero */
+  /* -------------------- Hero -------------------- */
 
   .hero {
       margin-top: 70px;
-      font-size: 2rem;
       height: 50vh;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
   }
 
-/* Projects */
-#projects {
-    margin: 0 10px;
-}
+  .hero__img {
+      border-radius: 50%;
+      width: 300px;
+      margin: 0 15px;
+  }
+
+  .hero__content {
+      font-size: 1.2rem;
+      margin: 0 15px;
+  }
+
+/* -------------------- Projects -------------------- */
 
 .project__header {
     font-size: 2rem;
@@ -124,7 +159,6 @@ img {
 .project {
     width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: stretch;
     color: #424242;
     font-size: 1.2rem;
@@ -135,15 +169,32 @@ img {
 }
 
 .col {
-    width: 45%;
+    width: 50%;
+    margin: 0 15px;
 }
 
 .card__img {
     border-radius: 5px;
 }
 
-.card__content {
+.card__body {
     border-radius: 5px;
-    background-color: #b9f6ca;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__content {
+
+}
+
+.card__btn {
+    
+}
+
+.card__content ion-icon {
+    font-size: 2rem;
+    margin-top: 15px;
 }

@@ -8,10 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Charles Roberts Portfolio</title>
 </head>
 
 <body id="home">
+
+    <!-- ------------------------------ HEADER ------------------------------ -->
+
     <header>
         <div class="navbar">
             <div class="nav__items container">
@@ -29,7 +33,6 @@
                 <ul class="nav">
                     <li><a href='#home'>Home</a></li>
                     <li><a href='#projects'>Projects</a></li>
-                    <li><a href='#skills'>Skills</a></li>
                     <li><a href='#about'>About</a></li>
                     <li><a href='#contact'>Contact</a></li>
                 </ul>
@@ -37,11 +40,28 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Charles Roberts - Frontend Developer</h1>
+    <!-- ------------------------------ ABOUT ------------------------------ -->
+
+    <section class="container" id="about">
+        <div class="hero">
+            <img class="hero__img" src="./images/profile.PNG" alt="Profile image">
+            <div class="hero__content">
+                <h2>Charles Roberts - Frontend Developer</h2>
+                <p>Welcome to my portfolio! My name is Charles Roberts and I am a self-taught front-end developer
+                    skilled in
+                    HTML, CSS, JavaScript and React.js. I am passionate about pushing myself to my limits to see what I
+                    am
+                    truly made of, no matter the task ahead of me. This has helped me push through times of extreme
+                    discomfort and periods with little motivation. I strive every single day to be the best I can be and
+                    continue building my skills and knowledge.
+                    When I'm not coding, you can probably find me running or out on the lake
+                    kayaking.</p>
+                <!-- I'm passionate about creating clean and efficient digital products to make people's experience with technology more enjoyable.  -->
+            </div>
         </div>
     </section>
+
+    <!-- ------------------------------ PROJECTS ------------------------------ -->
 
     <section id="projects">
         <div class="container">
@@ -50,21 +70,29 @@
 
                 <div class="project">
                     <img class="card__img col" src="./images/recipediscovery.PNG" alt="Recipe Discovery App Image">
-                    <div class="card__content col">
-                        <h2><strong>Recipe Discovery App</strong></h2>
-                        <p class="card__text">This is one of my side project created using HTML, CSS and JavaScript. I
-                            used
-                            axios to request data from an API, rendering a list of recipes. The consumer can than select
-                            from the returned list to recieve more details about an individual recipe along with
-                            ingredients
-                            and
-                            cooking instructions.</p>
+                    <div class="card__body col color__primary">
+                        <div class="card__content">
+                            <h2><strong>Recipe Discovery App</strong></h2>
+                            <p class="card__text">This is one of my side project created using HTML, CSS and JavaScript.
+                                I
+                                used
+                                axios to request data from an API, rendering a list of recipes. The consumer can than
+                                select
+                                from the returned list to recieve more details about an individual recipe along with
+                                ingredients
+                                and
+                                cooking instructions.</p>
+                            <ion-icon name="logo-html5"></ion-icon>
+                            <ion-icon name="logo-css3"></ion-icon>
+                            <ion-icon name="logo-javascript"></ion-icon>
+                        </div>
+
                         <div class="card__btn">
-                            <a class="cta-card" target='_blank' href='https://recipediscovery.netlify.app'><strong>Check
+                            <a class="btn" target='_blank' href='https://recipediscovery.netlify.app'><strong>Check
                                     Out
                                     Project</strong>
                             </a>
-                            <a class="cta-card" href='https://github.com/cjroberts2013/recipe-project'
+                            <a class="btn" href='https://github.com/cjroberts2013/recipe-project'
                                 target='_blank'><strong>Check
                                     Out
                                     Code</strong>
@@ -76,21 +104,26 @@
 
                 <div class="project">
                     <img class="card__img col" src="./images/brodysbusybees.PNG" alt="Recipe Discovery App Image">
-                    <div class="card__content col">
-                        <h2><strong>Recipe Discovery App</strong></h2>
-                        <p class="card__text">This is one of my side project created using HTML, CSS and JavaScript. I
-                            used
-                            axios to request data from an API, rendering a list of recipes. The consumer can than select
-                            from the returned list to recieve more details about an individual recipe along with
-                            ingredients
-                            and
-                            cooking instructions.</p>
+                    <div class="card__body col  color__secondary">
+                        <div class="card__content">
+                            <h2><strong>Recipe Discovery App</strong></h2>
+                            <p class="card__text">This is one of my side project created using HTML, CSS and JavaScript.
+                                I
+                                used
+                                axios to request data from an API, rendering a list of recipes. The consumer can than
+                                select
+                                from the returned list to recieve more details about an individual recipe along with
+                                ingredients
+                                and
+                                cooking instructions.</p>
+                        </div>
+
                         <div class="card__btn">
-                            <a class="cta-card" target='_blank' href='https://recipediscovery.netlify.app'><strong>Check
+                            <a class="btn" target='_blank' href='https://recipediscovery.netlify.app'><strong>Check
                                     Out
                                     Project</strong>
                             </a>
-                            <a class="cta-card" href='https://github.com/cjroberts2013/recipe-project'
+                            <a class="btn" href='https://github.com/cjroberts2013/recipe-project'
                                 target='_blank'><strong>Check
                                     Out
                                     Code</strong>
@@ -101,9 +134,13 @@
             </div>
         </div>
 
-
     </section>
 
+    <!-- ------------------------------ SKILLS ------------------------------ -->
+
+    <!-- ------------------------------ CONTACT ------------------------------ -->
+
+    <!-- ------------------------------ FOOTER ------------------------------ -->
     <footer></footer>
 </body>
 
