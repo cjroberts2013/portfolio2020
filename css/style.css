@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -51,6 +51,9 @@ img {
     background-color: #80d8ff;
 }
 
+.center {
+    text-align: center;
+}
 
 /* -------------------- Navbar -------------------- */
 
@@ -146,23 +149,13 @@ img {
     font-size: 2rem;
 }
 
-/* .project__list {
-    display: flex;
-}
-
-.card {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-}  */
-
 .project {
     width: 100%;
     display: flex;
     align-items: stretch;
     color: #424242;
     font-size: 1.2rem;
-    margin: 30px 0;
+    margin: 35px 0;
 }
 .project:nth-child(2n) {
     flex-direction: row-reverse;
@@ -170,7 +163,7 @@ img {
 
 .col {
     width: 50%;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .card__img {
@@ -197,4 +190,100 @@ img {
 .card__content ion-icon {
     font-size: 2rem;
     margin-top: 15px;
+}
+
+/* -------------------- Media Queries -------------------- */
+
+@media(max-width: 1500px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .project {
+        font-size: 1rem;
+    }
+
+    .card__content ion-icon {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: .8rem;
+        padding: 8px 15px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        margin: 100px auto 60px;
+    }
+    .hero__img {
+        margin-bottom: 30px;
+    }
+    
+    .project {
+        flex-direction: column;
+    }
+
+    .project:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px) {
+    .btn {
+        font-size: .8rem;
+        padding: 6px 10px;
+    }
+
+    .hero__content {
+        font-size: 1rem;
+    }
+
+    .hero__img {
+        width: 250px;
+    }
+
+    .project {
+    font-size: .8rem;
+}
+
+    .col {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card__content ion-icon {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    .btn {
+    font-size: 1rem;
+    }
+    
+    .card__btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
