@@ -64,6 +64,7 @@ img {
     background-color: #212121;
     position: fixed;
     top: 0px;
+    z-index: 10;
 }
 
 .navbar a {
@@ -179,18 +180,21 @@ img {
     align-items: center;
 }
 
-.card__content {
-
-}
-
-.card__btn {
-    
-}
 
 .card__content ion-icon {
     font-size: 2rem;
     margin-top: 15px;
 }
+
+/* -------------------- About -------------------- */
+.about__header {
+    font-size: 2rem;
+}
+
+
+/* -------------------- Contact -------------------- */
+
+/* -------------------- Footer -------------------- */
 
 /* -------------------- Media Queries -------------------- */
 
@@ -203,6 +207,14 @@ img {
 @media(max-width: 1300px) {
     .container {
         max-width: 960px;
+    }
+
+    .navbar {
+        font-size: 1rem;
+    }
+
+    .nav__logo {
+        font-size: 1.2rem;
     }
 
     .project {
@@ -252,6 +264,10 @@ img {
         padding: 6px 10px;
     }
 
+    .nav__logo {
+        margin-left: 10px;
+    }
+
     .hero__content {
         font-size: 1rem;
     }
@@ -278,12 +294,53 @@ img {
 @media(max-width: 500px) {
     .btn {
     font-size: 1rem;
+    margin: 6px;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .nav__logo {
+        margin-left: 0px;
+    }
+
+    .nav__items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .card__btn {
         display: flex;
         flex-direction: column;
+        
+    }
+}
+
+@media(max-width: 400px) {
+    .btn {
+        font-size: 1rem;
+        padding: 4px 7px;
     }
 
+    .nav a {
+        padding: 6px;
+    }
 
+    .hero {
+        margin-bottom: 30px;
+    }
+
+    .hero__img {
+        width: 200px;
+    }
+
+    .hero__content {
+        font-size: .8rem;
+    }
+
+    .project {
+        margin: 20px 0;
+    }
 }
