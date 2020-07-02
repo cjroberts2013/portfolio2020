@@ -130,7 +130,7 @@ img {
   /* -------------------- Hero -------------------- */
 
   .hero {
-      margin-top: 70px;
+      margin-top: 100px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -194,17 +194,57 @@ img {
     margin-top: 15px;
 }
 
-/* -------------------- About -------------------- */
-.about__header {
-    font-size: 2rem;
-}
-
-.about__content {
-
-}
-
-
 /* -------------------- Contact -------------------- */
+
+.contact__header {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact__form {
+    font-size: 1.2rem;
+    width: 75%;
+    margin: 0 auto 30px;
+    background-color: #b9f6ca;
+    border-radius: 5px;
+    color: #424242;
+    padding: 30px;
+}
+
+.form__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form label {
+    display: block;
+    font-weight: 700;
+}
+
+.contact__form input,
+.contact__form textarea {
+    display: block;
+    background-color: #bcbcbc;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+}
+
+.contact__form textarea {
+    margin-bottom: 30px;
+}
+
+.contact__form a {
+    text-decoration: none;
+    color: #424242;
+}
+
+
+.contact__btn {
+    align-self: center;
+}
 
 /* -------------------- Footer -------------------- */
 
@@ -241,6 +281,10 @@ img {
         font-size: .8rem;
         padding: 8px 15px;
     }
+
+    .contact__btn {
+        font-size: 1rem;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -267,6 +311,10 @@ img {
 
     .col {
         width: 100%;
+    }
+
+    .contact__btn {
+        font-size: 1rem;
     }
 }
 
@@ -301,6 +349,25 @@ img {
         font-size: 1.4rem;
         margin-bottom: 15px;
     }
+
+    .contact__form {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .contact__btn {
+        font-size: 1rem;
+    }
+
+    .contact__form input,
+    .contact__form textarea {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .contact__form textarea {
+        margin-bottom: 15px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -330,7 +397,24 @@ img {
     .card__btn {
         display: flex;
         flex-direction: column;
-        
+    }
+
+    .contact__form {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0 30px 20px;
+        font-size: .8rem;
+        margin-bottom: 0;
+    }
+
+    .contact__header {
+        color: #424242;
+        background-color: #b9f6ca;
+        margin-bottom: 0;
+    }
+
+    .contact__btn {
+        font-size: 1rem;
     }
 }
 
