@@ -6,6 +6,10 @@
 
 /* -------------------- Utility -------------------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', 'Roboto', 'Noto', sans-serif;
     line-height: 1.6;
@@ -127,9 +131,9 @@ img {
 
   .hero {
       margin-top: 70px;
-      height: 50vh;
       display: flex;
-      justify-content: space-evenly;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
   }
 
@@ -141,7 +145,11 @@ img {
 
   .hero__content {
       font-size: 1.2rem;
-      margin: 0 15px;
+      margin: 30px 15px;
+  }
+
+  .hero__content ol {
+      padding-left: 30px;
   }
 
 /* -------------------- Projects -------------------- */
@@ -189,6 +197,10 @@ img {
 /* -------------------- About -------------------- */
 .about__header {
     font-size: 2rem;
+}
+
+.about__content {
+
 }
 
 
@@ -311,6 +323,10 @@ img {
         align-items: center;
     }
     
+    .hero__content {
+        font-size: .8rem;
+    }
+
     .card__btn {
         display: flex;
         flex-direction: column;
@@ -336,9 +352,7 @@ img {
         width: 200px;
     }
 
-    .hero__content {
-        font-size: .8rem;
-    }
+    
 
     .project {
         margin: 20px 0;
