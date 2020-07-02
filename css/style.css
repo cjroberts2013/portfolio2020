@@ -248,6 +248,14 @@ img {
 
 /* -------------------- Footer -------------------- */
 
+.foot {
+    font-size: 1rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
 /* -------------------- Media Queries -------------------- */
 
 @media(max-width: 1500px) {
@@ -415,6 +423,10 @@ img {
 
     .contact__btn {
         font-size: 1rem;
+    }
+
+    .foot {
+        font-size: .8rem;
     }
 }
 
