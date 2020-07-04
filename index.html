@@ -249,7 +249,8 @@
                     below or by messaging me on <a href="https://twitter.com/cjrobertstech" target='_blank'>TWITTER <i
                             name='atag' class=" fab fa-twitter"></i></a></h3>
                 <br>
-                <form name="contact" method="POST" data-netlify="true" netlify class="form__items">
+                <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify
+                    class="form__items">
                     <div class="form__group">
                         <label for="name">Full Name</label>
                         <input type="text" name="name" placeholder="John Smith">
@@ -262,6 +263,7 @@
                         <label for="name">Message</label>
                         <textarea type="text" name="message" rows="8"></textarea>
                     </div>
+                    <div class="" data-netlify-recaptcha="true"></div>
 
                     <button type="submit" class="contact__btn color__primary btn">Send Message</button>
 
