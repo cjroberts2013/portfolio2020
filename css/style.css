@@ -59,6 +59,13 @@ img {
     text-align: center;
 }
 
+:target:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+    }
+
 /* -------------------- Navbar -------------------- */
 
 .navbar {
@@ -198,9 +205,6 @@ img {
 
 /* -------------------- About -------------------- */
 
-#about {
-    margin-top: 100px;
-}
 
 .about__header {
     font-size: 2rem;
@@ -214,6 +218,13 @@ img {
 .about__content ol {
     padding-left: 30px;
 }
+/* -------------------- Blog -------------------- */
+
+
+
+
+
+
 
 /* -------------------- Contact -------------------- */
 
