@@ -194,6 +194,27 @@ img {
     margin-top: 15px;
 }
 
+
+
+/* -------------------- About -------------------- */
+
+#about {
+    margin-top: 100px;
+}
+
+.about__header {
+    font-size: 2rem;
+}
+
+.about__content {
+    font-size: 1.2rem;
+    margin: 30px 15px;
+}
+
+.about__content ol {
+    padding-left: 30px;
+}
+
 /* -------------------- Contact -------------------- */
 
 .contact__header {
@@ -337,7 +358,7 @@ img {
     }
 
     .hero__content {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .hero__img {
@@ -398,8 +419,9 @@ img {
         align-items: center;
     }
     
-    .hero__content {
-        font-size: .8rem;
+    .hero__content,
+    .about__content {
+        font-size: 1rem;
     }
 
     .card__btn {
