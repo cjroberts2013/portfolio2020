@@ -278,6 +278,7 @@ img {
     align-self: center;
 }
 
+
 /* -------------------- Footer -------------------- */
 
 .foot {
@@ -286,6 +287,57 @@ img {
     align-self: center;
     justify-content: center;
     padding: 10px 0;
+}
+
+/* -------------------- Blog pages -------------------- */
+
+.blog {
+    margin-top: 100px;
+}
+
+.blog__content {
+    font-size: 1.2rem;
+    margin: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__post {
+    font-size: 1.2rem;
+}
+
+.post__heading,
+.post__body {
+    margin: 15px;
+}
+
+
+.post__heading h1{
+    font-size: 3rem;
+}
+
+.blog__btn {
+    border: 2px solid #b9f6ca;
+    color: #b9f6ca;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.blog__btn:hover {
+    background-color: #b9f6ca;
+    color: #212121;
+}
+
+.blog__btn--container {
+    display: flex;
+    justify-content: center;
 }
 
 /* -------------------- Media Queries -------------------- */
@@ -408,6 +460,14 @@ img {
     .contact__form textarea {
         margin-bottom: 15px;
     }
+
+    .post__heading h1{
+        font-size: 2rem;
+    }
+
+    .blog__btn {
+        font-size: 1rem;
+    }
 }
 
 @media(max-width: 500px) {
@@ -431,7 +491,8 @@ img {
     }
     
     .hero__content,
-    .about__content {
+    .about__content,
+    .post__body {
         font-size: 1rem;
     }
 
