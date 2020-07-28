@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./images/icon-48x48.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Charles Roberts Portfolio</title>
+</head>
+
+<body id="home">
+
+    <!-- ------------------------------ HEADER ------------------------------ -->
+
+    <header>
+        <div class="navbar">
+            <div class="nav__items container">
+                <div class="nav__logo"><strong>></strong>
+                    <a href="https://twitter.com/cjrobertstech" target='_blank'><i name='atag'
+                            class=" fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/cjrobertstech/" target='_blank'><i name='atag'
+                            class=" fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/cjroberts2013" target='_blank'><i name='atag'
+                            class="fab fa-github"></i></a>
+                    <span class="cursor">
+                    </span>
+                </div>
+
+                <ul class="nav">
+                    <li><a href='../../#home'>Home</a></li>
+                    <li><a href='../../#projects'>Projects</a></li>
+                    <li><a href='../../#about'>About</a></li>
+                    <li><a href='../blogs.html'>Blog</a></li>
+                    <li><a href='../../#contact'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ------------------------------ HERO ------------------------------ -->
+
+    <section class="container">
+        <div class="blog">
+            <div class="blog__post">
+                <div class="post__heading">
+                    <h1 class="">React Components</h1>
+                    <p>19 January 2020 - Written by Charles Roberts</p>
+                    <br>
+                    <hr>
+                </div>
+                <div class="post__body">
+                    <p>
+                        So one of my main coding goals for this year is to master React. It is one of the skills that I
+                        would like to be employeed to work with. So today, along with the past few days I have been
+                        reading
+                        and working with react. One of the things I find myself struggling with is remembering the
+                        differences between functional stateless components and class components. I know it is in the
+                        name
+                        but I just keep getting these confused and not remembering how to write them separately. Because
+                        of
+                        this, I decided to spend a little time breaking them down better so that I can really wrap my
+                        head
+                        around them moving forward and stop with all this confusion. So below I am going to briefly
+                        break
+                        down the differences so that I have a personal reference that I can check back on.
+                    </p>
+                    <br>
+                    <h2>Functional Stateless Components</h2>
+                    <p>Below you can see the simple syntax to create a functional, stateless component.</p><br>
+                    <div class="code">
+                        <code>
+                            function Welcome(props) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h1>Hello, {props.name}&lt;/h1>;<br>
+                              }
+                        </code>
+                    </div><br>
+                    <p>This is done by writing a simple Javascript function. It is the simplest way to define a
+                        component.</p><br>
+                    <p>This is considered a functional component because it accepts props as an argument and returns a
+                        react element. It is also called stateless because you cannot us setState in these types of
+                        components. The benefit of this is that these components are easier to read and they require
+                        less code. The react team also mentioned that there may be extra performance boost when using
+                        them. It is recommended to use these type of components whenever possible.</p><br>
+                    <hr><br>
+
+                    <h2>Class Components</h2>
+                    <p>React component can also be created using ES6 class syntax. This is called a class component.</p>
+                    <br>
+                    <div class="code">
+                        <code>
+                            class Welcome extends React.Component {<br>
+                                &nbsp;&nbsp;render() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h1>Hello, {this.props.name}&lt;/h1>;<br>
+                                    &nbsp;&nbsp;}<br>
+                              }
+                        </code>
+                    </div><br>
+                    <p>The Class Component requires you to extend React.Component as you can see above. This statement
+                        creates an inheritance to React.Component, and gives your component access to React.Component's
+                        functions. Class components also require a render function which returns a react element. the
+                        benefit to using class components is the use of state and it allows more control through the use
+                        of lifecycle hooks.</p><br>
+                    <hr>
+                    <br>
+                    <h2>Moving forward</h2>
+                    <br>
+                    <p>I hope to continue doing these small deep dives to increase my knowledge and understanding more.
+                        I know it may be a little silly for me to struggle with this in the first place but it is what
+                        it is. Now I will fill more confident with working with both functional and class components.
+                    </p>
+                    <br>
+                    <p>Along with sharing my daily progress, I plan on sharing interesting and helpful articles that I
+                        find along the way. Thank you so much for checking out my post! If you have any questions, feel
+                        free to shoot me a message on twitter. I'd be glad to start up a conversation.
+                    </p>
+                    <br>
+                    <p>- Charles Roberts</p>
+
+                </div>
+                <div class="blog__btn--container">
+                    <a class="blog__btn" href="../blogs.html">Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ------------------------------ FOOTER ------------------------------ -->
+    <footer>
+        <div class="foot container">
+            All rights reserved | &copy; 2020 | Charles Roberts
+        </div>
+    </footer>
+</body>
+
+</html>
