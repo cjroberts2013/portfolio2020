@@ -317,6 +317,12 @@ img {
     margin: 15px;
 }
 
+/* .post__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
 
 .post__heading h1{
     font-size: 3rem;
@@ -363,6 +369,16 @@ img {
 
 .blog__card:hover {
     transform: translate(5px, -5px);
+}
+
+.code {
+    background-color: #b9f6ca;
+    color: #424242;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
 }
 
 /* -------------------- Media Queries -------------------- */
@@ -503,8 +519,11 @@ img {
         font-size: 1rem;
     }
 
-    .blog__list {
-        grid-template-columns: 1fr;
+    
+
+    .code {
+        font-size: 1.1rem;
+        padding: 6px 12px;
     }
 }
 
@@ -561,33 +580,23 @@ img {
         font-size: .8rem;
     }
 
+    .blog__list {
+        grid-template-columns: 1fr;
+    }
+
     .blog__card {
         font-size: 1rem;
         padding: 10px;
     }
-}
-
-@media(max-width: 400px) {
-    .btn {
+    .code {
         font-size: 1rem;
-        padding: 4px 7px;
-    }
-
-    .nav a {
-        padding: 6px;
-    }
-
-    .hero {
-        margin-bottom: 30px;
-    }
-
-    .hero__img {
-        width: 200px;
-    }
-
-    
-
-    .project {
-        margin: 20px 0;
+        padding: 3px 6px;
     }
 }
+
+@media(max-width: 370px) {
+    .code {
+        font-size: .8rem;
+    }
+}
+
