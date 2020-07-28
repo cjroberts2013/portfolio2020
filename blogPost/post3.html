@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./images/icon-48x48.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Charles Roberts Portfolio</title>
+</head>
+
+<body id="home">
+
+    <!-- ------------------------------ HEADER ------------------------------ -->
+
+    <header>
+        <div class="navbar">
+            <div class="nav__items container">
+                <div class="nav__logo"><strong>></strong>
+                    <a href="https://twitter.com/cjrobertstech" target='_blank'><i name='atag'
+                            class=" fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/cjrobertstech/" target='_blank'><i name='atag'
+                            class=" fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/cjroberts2013" target='_blank'><i name='atag'
+                            class="fab fa-github"></i></a>
+                    <span class="cursor">
+                    </span>
+                </div>
+
+                <ul class="nav">
+                    <li><a href='../../#home'>Home</a></li>
+                    <li><a href='../../#projects'>Projects</a></li>
+                    <li><a href='../../#about'>About</a></li>
+                    <li><a href='../blogs.html'>Blog</a></li>
+                    <li><a href='../../#contact'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ------------------------------ HERO ------------------------------ -->
+
+    <section class="container">
+        <div class="blog">
+            <div class="blog__post">
+                <div class="post__heading">
+                    <h1 class="">React State</h1>
+                    <p>20 January 2020 - Written by Charles Roberts</p>
+                    <br>
+                    <hr>
+                </div>
+                <div class="post__body">
+                    <p>
+                        The objective in today's post is to go over React state to help myself get a better
+                        understanding of the concept and how to use it.
+                    </p>
+                    <br>
+                    <h2>What is state</h2>
+                    <br>
+                    <p>
+                        State is one of the most powerful features of components in React. It allows you to track data
+                        in your app and render a UI in response to changes in this data. If your data changes, your
+                        component re-renders.
+                    </p>
+                    <br>
+                    <p>
+                        To begin, lets look at a simple example of how to use state in a component.
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            <!-- function Welcome(props) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h1>Hello, {props.name}&lt;/h1>;<br>
+                              } -->
+                              class MyComponent extends React.Component {<br>
+                                &nbsp;constructor(props) {<br>
+                                    &nbsp;&nbsp;super(props);<br>
+                                    &nbsp;&nbsp;&nbsp;this.state = {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;name: "Charles",<br>
+                                        &nbsp;&nbsp;&nbsp;};<br>
+                                        &nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;render() {<br>
+                                            &nbsp;&nbsp;&nbsp;return (<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>{this.state.name}&lt;/h1><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+                                            &nbsp;&nbsp;&nbsp;);<br>
+                                            &nbsp;&nbsp;}<br>
+                                            &nbsp;}
+
+                        </code>
+                    </div>
+
+
+                    <br>
+                    <p>
+                        State is assigned its initial value in the class constructor. Once assigned, you can display any
+                        part of it in the UI that is rendered. You can access the data with this.state.protpertyname.
+                    </p>
+                    <br>
+                    <p>
+                        There is another way to access state in a component. In the render() method, before the return
+                        statement, you can write JavaScript directly. For example, you could declare functions, access
+                        data from state or props, etc. Then, you can assign any data to variables, which you have access
+                        to in the return statement.
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            <!-- function Welcome(props) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h1>Hello, {props.name}&lt;/h1>;<br>
+                              } -->
+                              class MyComponent extends React.Component {<br>
+                                &nbsp;constructor(props) {<br>
+                                    &nbsp;&nbsp;super(props);<br>
+                                    &nbsp;&nbsp;&nbsp;this.state = {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;name: "Charles",<br>
+                                        &nbsp;&nbsp;&nbsp;};<br>
+                                        &nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;render() {<br>
+                                            &nbsp;&nbsp;&nbsp;const name = this.state.name;<br>
+                                            &nbsp;&nbsp;&nbsp;return (<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>{name}&lt;/h1><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+                                            &nbsp;&nbsp;&nbsp;);<br>
+                                            &nbsp;&nbsp;}<br>
+                                            &nbsp;}
+
+                        </code>
+                    </div>
+
+                    <br>
+                    <p>
+                        This example shows assigning this.state.name to a constant in the render function, and accessing
+                        this constant in the rendered UI.
+                    </p>
+                    <br>
+                    <p>
+                        State is changed using setState, which is the API method provided with the library so that the
+                        user is able to define and manipulate state over time. SetState is a topic we will return to in
+                        a different post.
+                    </p>
+                    <br>
+                    <p>
+                        Along with sharing my daily progress, I plan on sharing interesting and helpful articles that I
+                        find along the way. Thank you so much for checking out my post! If you have any questions, feel
+                        free to shoot me a message on twitter. I'd be glad to start up a conversation.
+                    </p>
+                    <br>
+                    — Charles Roberts
+                </div>
+                <div class="blog__btn--container">
+                    <a class="blog__btn" href="../blogs.html">Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ------------------------------ FOOTER ------------------------------ -->
+    <footer>
+        <div class="foot container">
+            All rights reserved | &copy; 2020 | Charles Roberts
+        </div>
+    </footer>
+</body>
+
+</html>
