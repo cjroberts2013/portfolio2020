@@ -307,6 +307,11 @@ img {
     font-size: 1.2rem;
 }
 
+.blog__header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
 .post__heading,
 .post__body {
     margin: 15px;
@@ -338,6 +343,26 @@ img {
 .blog__btn--container {
     display: flex;
     justify-content: center;
+}
+
+.blog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.blog__card {
+    font-size: 1.2rem;
+    background-color: #b9f6ca;
+    color: #424242;
+    transition: all ease-in-out .1s;
+    text-decoration: none;
+    padding: 24px;
+    border-radius: 5px;
+}
+
+.blog__card:hover {
+    transform: translate(5px, -5px);
 }
 
 /* -------------------- Media Queries -------------------- */
@@ -408,6 +433,15 @@ img {
     .contact__btn {
         font-size: 1rem;
     }
+
+    .blog__card {
+        font-size: 1rem;
+        padding: 16px;
+    }
+
+    .blog__list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(max-width: 800px) {
@@ -468,6 +502,10 @@ img {
     .blog__btn {
         font-size: 1rem;
     }
+
+    .blog__list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width: 500px) {
@@ -521,6 +559,11 @@ img {
 
     .foot {
         font-size: .8rem;
+    }
+
+    .blog__card {
+        font-size: 1rem;
+        padding: 10px;
     }
 }
 
