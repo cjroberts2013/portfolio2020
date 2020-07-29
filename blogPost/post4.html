@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./images/icon-48x48.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Charles Roberts Portfolio</title>
+</head>
+
+<body id="home">
+
+    <!-- ------------------------------ HEADER ------------------------------ -->
+
+    <header>
+        <div class="navbar">
+            <div class="nav__items container">
+                <div class="nav__logo"><strong>></strong>
+                    <a href="https://twitter.com/cjrobertstech" target='_blank'><i name='atag'
+                            class=" fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/cjrobertstech/" target='_blank'><i name='atag'
+                            class=" fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/cjroberts2013" target='_blank'><i name='atag'
+                            class="fab fa-github"></i></a>
+                    <span class="cursor">
+                    </span>
+                </div>
+
+                <ul class="nav">
+                    <li><a href='../../#home'>Home</a></li>
+                    <li><a href='../../#projects'>Projects</a></li>
+                    <li><a href='../../#about'>About</a></li>
+                    <li><a href='../blogs.html'>Blog</a></li>
+                    <li><a href='../../#contact'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ------------------------------ HERO ------------------------------ -->
+
+    <section class="container">
+        <div class="blog">
+            <div class="blog__post">
+                <div class="post__heading">
+                    <h1 class="">Styling React Components</h1>
+                    <p>22 January 2020 - Written by Charles Roberts</p>
+                    <br>
+                    <hr>
+                </div>
+                <div class="post__body">
+                    <p>
+                        In todays blog, we will discuss a few different ways to style react components.
+                    </p>
+                    <br>
+                    <h2>Inline Styles</h2>
+                    <br>
+                    <p>
+                        The most simple way to add styling to a react component is throught the us of inline styles. In
+                        React, inline styles are not specified as a string. Instead they are specified with an object
+                        whose key is the camelCased version of the style name, and whose value is the style's value
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            function MyComponent() {<br>
+                                &nbsp;&nbsp;return &lt;div style={{color: 'red', fontSize: 52px}}>Hello World!&lt;/div>;<br>
+                              }
+                        </code>
+                    </div>
+
+
+                    <br>
+                    <p>
+                        We can create variables that store the style properties and then pass it to the element as shown
+                        below.
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            const style = {<br>
+                                &nbsp;&nbsp;color: 'red',<br>
+                                &nbsp;&nbsp;fontSize: 52px<br>
+                            }<br>
+                            function MyComponent() {<br>
+                                &nbsp;&nbsp;return &lt;div style={style}>Hello World!&lt;/div>;<br>
+                              }
+                        </code>
+                    </div>
+
+
+                    <br>
+                    <p>
+                        These will return the same effect. This is an ok method of styling components if you only have a
+                        few style properties.
+                    </p>
+                    <br>
+                    <p>
+                        The main downside to inline styles is that you can not use sudo selectors.
+                    </p>
+                    <br>
+                    <hr>
+                    <br>
+                    <h2>CSS Stylesheet</h2>
+                    <br>
+                    <p>
+                        When you would like to reuse style properties as you would with regular html and css, you can
+                        import your css file to the component file.
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            <!-- function Welcome(props) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h1>Hello, {props.name}&lt;/h1>;<br>
+                              } -->
+                            import React from 'react';<br>
+                            import './MyComponent.css';<br>
+                            <br>
+                            const MyComponent = () => (<br>
+                                &nbsp;&nbsp;&lt;div className="container"><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 className="header">Welcome To My Blog&lt;/h1><br>
+                                &nbsp;&nbsp;&lt;/div><br>
+                            );<br> <br>
+
+                            export default MyComponent;
+                        </code>
+                    </div>
+
+                    <br>
+                    <p>
+                        One thing to make note of is that because React uses JSX, within components you must use
+                        className. This is because class is a reserved word in react.
+                    </p>
+                    <br>
+                    <hr>
+                    <br>
+                    <h2>Dynamically Changing Styles/Classes</h2>
+                    <br>
+                    <p>
+                        React has a way for you to dynamically change your classes, and therefore change your styles. By
+                        creating class based styles in your css file
+                    </p>
+                    <br>
+                    <div class="code">
+                        <code>
+                            MyComponent.css<br>
+                            <br>
+                            
+                            .red {<br>
+                                &nbsp;&nbsp;background-color: red;<br>
+                            }<br>
+                            .bold {<br>
+                                &nbsp;&nbsp;font-weight: bold;<br>
+                            }<br>
+                        </code>
+                    </div>
+                    <br>
+                    <p>
+                        You can conditionally render it in your react component. This can be done first, creating a
+                        variable equal to an empty string
+                    </p>
+                    <br>
+
+                    <div class="code">
+                        <code>
+                            const classes = []<br>
+                        </code>
+                    </div>
+                    <br>
+                    <p>
+                        Once done, you can create conditional statements that if true, push the class name into the
+                        classes array we created above.
+                    </p>
+                    <br>
+                    <div class="code">
+                        <code>
+                            const classes = []<br>
+                            if(conditional statement) {<br>
+                                &nbsp;&nbsp;classes.push('red'); // classes = ['red']<br>
+                            }<br>
+                            if(second conditional statement) {<br>
+                                &nbsp;&nbsp;classes.push('bold') // classes = ['bold']<br>
+                            }<br>
+                        </code>
+                    </div>
+
+
+                    <br>
+                    <p>
+                        If both statements were to return true, then the classes array would equal ['red', 'bold']. To
+                        implement this into your component, you need to bind your className to classes.join(' '). With
+                        JSX, everything is javascript so this works. All together, this looks like this
+                    </p>
+                    <br>
+                    <div class="code">
+                        <code>
+                            const classes = []<br>
+                            if(conditional statement) {<br>
+                                &nbsp;&nbsp;classes.push('red'); // classes = ['red']<br>
+                            }<br>
+                            if(second conditional statement) {<br>
+                                &nbsp;&nbsp;classes.push('bold') // classes = ['bold']<br>
+                            }<br>
+                            return(<br>
+                                &nbsp;&nbsp;const MyComponent = () => (<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 className={classes.join(' ')}>Welcome To My Blog&lt;/h1><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+                                &nbsp;&nbsp;)<br>
+                        </code>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <h2>Other Methods</h2>
+                    <br>
+                    <p>On top of the methods of adding style to components that we have shown above, there are many
+                        third party packages that make it really easy to style components. We will not be diving into
+                        these in this post but some of the most popular ones are Styled-components and Css-modules.</p>
+                    <br>
+                    <p>Along with sharing my daily progress, I plan on sharing interesting and helpful articles that I
+                        find along the way. Thank you so much for checking out my post! If you have any questions, feel
+                        free to shoot me a message on twitter. I'd be glad to start up a conversation.</p>
+                    <br>
+
+                    — Charles Roberts
+
+                </div>
+                <div class="blog__btn--container">
+                    <a class="blog__btn" href="../blogs.html">Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ------------------------------ FOOTER ------------------------------ -->
+    <footer>
+        <div class="foot container">
+            All rights reserved | &copy; 2020 | Charles Roberts
+        </div>
+    </footer>
+</body>
+
+</html>
